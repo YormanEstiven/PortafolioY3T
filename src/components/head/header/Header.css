@@ -1,0 +1,50 @@
+
+.header-container{
+    background-color: #302f2f;
+    width: 100%;
+    min-height: 483px;
+    display: flex;
+    box-shadow: 2px 0px 0px 4px #7b64ff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    
+}
+.card-container{
+    margin: 106px auto 0px auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.caricatura{
+    width:170px;
+    height:195px;
+    border: 2px solid #7b64ff;
+    border-radius: 50px;
+}
+
+.description-container{
+    height: 78px;
+}
+.name,.description{
+    margin:2px 0px 0px 15px;
+    width: 522px;
+}
+
+
+
+.socialMedia{
+    display: flex;
+    justify-content: center;
+}
+.optionSocial{
+    width: inherit;
+    height: 34px;
+    margin: 0px 10px;
+    border: solid 0.1px rgba(0, 0, 0, 0);
+    border-radius: 2px;
+}
+.optionSocial:hover{
+    
+    box-shadow: 1px 2px 2px 2px #e9e8eb65;
+}

@@ -1,0 +1,36 @@
+.container-studies{
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-studies{
+    color: #7b64ff;
+}
+
+.icon{
+    margin: 15px;
+}
+
+.section-items{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+.section-items a:hover{
+    color: #7b64ff;
+}
+.itemStudy{
+    width: 40%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.items--body{
+    width: 100%;
+    padding: 10px;
+
+}
