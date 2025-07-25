@@ -36,26 +36,32 @@ export const NewsApi = () => {
     }
 
     return (
-        <div className='container-news'>
-            <div className="container-form">
-                <form action="">
-                    <label htmlFor="">¿Sobre que tema te interesan las noticias?</label>
-                    <select name="category" id="category" onChange={handleSelect}>
-                        <option value="0">Tecnología</option>
-                        <option value="1">Entretenimiento</option>
-                        <option value="2">Deportes</option>
-                        <option value="3">Salud</option>
-                        <option value="4">Negocios</option>
-                    </select>
-                    <input type="submit" value="Enviar" onClick={handleClick} />
-                </form>
-            </div>
-            <div className="container-cards">
-                {
-                    articles.length > 0 &&
-                    articles.map((value,index)=> ( <Card key={index} title={value.title} author={value.author} publishedAt={value.publishedAt} /> ))
-                }
-            </div>
+      <div className="container-news">
+        <div className="container-form">
+          <form action="">
+            <label htmlFor="">¿Sobre que tema te interesan las noticias?</label>
+            <select name="category" id="category" onChange={handleSelect}>
+              <option value="0">Selecciona una opción</option>
+              <option value="1">Entretenimiento</option>
+              <option value="2">Deportes</option>
+              <option value="3">Salud</option>
+              <option value="4">Negocios</option>
+              <option value="5">Tecnología</option>
+            </select>
+            <input type="submit" value="Enviar" onClick={handleClick} />
+          </form>
         </div>
-    )
+        <div className="container-cards">
+          {articles.length > 0 &&
+            articles.map((value, index) => (
+              <Card
+                key={index}
+                title={value.title}
+                author={value.author}
+                publishedAt={value.publishedAt}
+              />
+            ))}
+        </div>
+      </div>
+    );
 }
