@@ -83,6 +83,13 @@
     position: relative;
     border-radius: 10px;
   }
+  .descriptiontictactoe{
+    
+    font-size: 1.2rem;
+    margin: 10px auto;
+    width: 80%;
+    text-align: center;
+  }
   
   .turn .square,
   .winner .square {
@@ -157,7 +164,7 @@
 }
 
 /* Responsive para tablets y móviles */
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .board .game {
     gap: 6px;
   }

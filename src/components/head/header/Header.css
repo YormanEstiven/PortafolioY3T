@@ -7,15 +7,20 @@
   padding: 32px 0;
 }
 .card-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 40px;
-  border-radius: 24px;
-  box-shadow: 0 4px 24px 0 #7b64ff22;
-  padding: 32px 48px;
-  max-width: 900px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 12px;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px 0 #7b64ff44;
+  gap: 24px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.card-container:hover {
+  transition: transform 0.2s, box-shadow 0.2s;
+  background: #292929;
 }
 .image-container {
   display: flex;
@@ -51,7 +56,10 @@
 .description-container {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  max-width: 600px;
 }
 .name {
   font-size: 1.2rem;
@@ -59,7 +67,8 @@
   color: #7b64ff;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
+  height: 0px;
 }
 .description {
   font-size: 1rem;
@@ -80,6 +89,9 @@
 }
 
 @media (max-width: 400px) {
+    .card-container {
+    width: 100%;
+  }
   .caricatura {
     width: 80px;
     height: 80px;

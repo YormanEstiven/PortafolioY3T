@@ -8,6 +8,7 @@
   margin: 0 auto;
   position: fixed;
   top: 0;
+  z-index: 1;
 }
 
 .logo-container {
@@ -64,3 +65,76 @@ li{
   border-radius: 3px;
   font-weight: 600;
 }
+
+
+/* Responsive menú hamburguesa para móviles */
+@media (max-width: 580px) {
+  .nav-container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 10px;
+    height: 54px;
+    font-size: 19px;
+  }
+  .logo-container {
+    font-size: 1rem;
+    width: auto;
+  }
+  .options-container {
+    position: absolute;
+    top: 54px;
+    left: 0;
+    width: 100vw;
+    background: #080413;
+    display: none;
+    flex-direction: column;
+    z-index: 10;
+    box-shadow: 0 4px 16px #7b64ff22;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+  .options-container.active {
+    display: flex;
+  }
+  .options {
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    align-items: flex-start;
+    padding: 0;
+  }
+  .item-option, .item-option-active {
+    width: 100%;
+    padding: 12px 18px;
+    margin: 0;
+    border-radius: 0;
+    border-bottom: 1px solid #23223a;
+    font-size: 1rem;
+  }
+  /* Botón hamburguesa */
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    margin-left: auto;
+  }
+  .menu-toggle span {
+    height: 4px;
+    width: 28px;
+    background: #7b64ff;
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: 0.3s;
+    display: block;
+  }
+}
+
+/* Oculta el botón hamburguesa en desktop */
+.menu-toggle {
+  display: none;
+}
+
+/* ...existing code... */

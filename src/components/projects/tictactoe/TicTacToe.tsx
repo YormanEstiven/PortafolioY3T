@@ -54,53 +54,72 @@ const TicTacToe = () => {
     }
 
     return (
-        <div>
-            <h2 style={{ color: '#7b64ff', textAlign: 'center' }}>¿Haz jugado 3 en raya?<br />Pues es tu momento</h2>
-            <p style={{ textAlign: 'center' }}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus provident rerum maxime eius dolorem.</p>
-            <div className="board">
-                <section className="game">
-                    {
-                        board.map((item, index) => {
-                            let Item=item;
-                            item=Item
-                            return (
-                                <Square
-                                    key={index} index={index} updateBoard={updateBoard} isSelected={false}>
-                                    {board[index]}
-                                </Square>
-                            )
-                        })
-                    }
-                </section>
-                <section className="turn">
-                    <Square updateBoard={() => {}} index={0} isSelected={turn === TURNS.O}>{TURNS.O}</Square>
-                    <Square updateBoard={() => {}} index={0} isSelected={turn === TURNS.X}>{TURNS.X}</Square>
-                </section>
-                {
-                    winner !== null && (
-                        <section className="winner">
-                            <div className="text">
-                                <h2>
-                                    {
-                                        winner === false
-                                            ? 'Empate'
-                                            : 'Gano'
-                                    }
-                                </h2>
-                                <header className="win">
-                                    {winner && <Square updateBoard={() => {}} index={0} isSelected={false}>{winner}</Square>}
-                                </header>
+      <div>
+        <h2 style={{ color: "#7b64ff", textAlign: "center" }}>
+          ¿Haz jugado 3 en raya?
+          <br />
+          Pues es tu momento
+        </h2>
+        <p className="descriptiontictactoe">
+          Tic Tac Toe (también conocido como Tres en Raya) es un juego clásico
+          de estrategia para dos jugadores, donde cada uno coloca su símbolo (X
+          o O) en una cuadrícula de 3x3, intentando alinear tres de sus símbolos
+          en fila, columna o diagonal antes que su oponente.
+        </p>
+        <div className="board">
+          <section className="game">
+            {board.map((item, index) => {
+              const Item = item;
+              item = Item;
+              return (
+                <Square
+                  key={index}
+                  index={index}
+                  updateBoard={updateBoard}
+                  isSelected={false}
+                >
+                  {board[index]}
+                </Square>
+              );
+            })}
+          </section>
+          <section className="turn">
+            <Square
+              updateBoard={() => {}}
+              index={0}
+              isSelected={turn === TURNS.O}
+            >
+              {TURNS.O}
+            </Square>
+            <Square
+              updateBoard={() => {}}
+              index={0}
+              isSelected={turn === TURNS.X}
+            >
+              {TURNS.X}
+            </Square>
+          </section>
+          {winner !== null && (
+            <section className="winner">
+              <div className="text">
+                <h2>{winner === false ? "Empate" : "Gano"}</h2>
+                <header className="win">
+                  {winner && (
+                    <Square updateBoard={() => {}} index={0} isSelected={false}>
+                      {winner}
+                    </Square>
+                  )}
+                </header>
 
-                                <footer>
-                                    <button onClick={resetGame}>empezar de nuevo</button>
-                                </footer>
-                            </div>
-                        </section>
-                    )
-                }
-            </div>
+                <footer>
+                  <button onClick={resetGame}>empezar de nuevo</button>
+                </footer>
+              </div>
+            </section>
+          )}
         </div>
-    )
+      </div>
+    );
 }
 
 export default TicTacToe;

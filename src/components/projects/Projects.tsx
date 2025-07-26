@@ -8,17 +8,15 @@ const Projects = () => {
     return (
       <div className="container-box" id="projects">
         <aside className="aside-list">
-          <h3>
-            <strong
-              style={{ color: "#7b64ff", textAlign: "center", height: "0px" }}
-            >
-              Explora mis proyectos:
-            </strong>
-          </h3>
-          <p style={{ color: "#fff", fontSize: "18px", padding: "5px" }}>
-            <br /> un emocionante juego de 3 en raya🎮, noticias frescas🗞️ y
-            documentación esencial de una de mis API's desarrolladas🧙‍♂️
-          </p>
+          <div className="aside-list-body">
+            <h3 className="title-projects">
+              <strong>Explora mis proyectos:</strong>
+            </h3>
+            <p>
+              Un emocionante juego de 3 en raya🎮, noticias frescas🗞️ y
+              documentación esencial de una de mis API's desarrolladas🧙‍♂️
+            </p>
+          </div>
           <li
             className={`li-item${project == 1 ? "-selected" : ""}`}
             onClick={() => setProject(1)}
